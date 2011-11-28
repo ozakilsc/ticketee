@@ -14,8 +14,8 @@ development:
   reconnect: false
   database: ticketee_development
   pool: 5
-  username: root
-  password:
+  username: rails_in_action
+  password: rails_in_action
   host: localhost
 
 # Warning: The database defined as "test" will be erased and
@@ -27,8 +27,8 @@ test: &test
   reconnect: false
   database: ticketee_test
   pool: 5
-  username: root
-  password:
+  username: rails_in_action
+  password: rails_in_action
   host: localhost
 
 production:
@@ -37,8 +37,8 @@ production:
   reconnect: false
   database: ticketee_production
   pool: 5
-  username: root
-  password:
+  username: rails_in_action
+  password: rails_in_action
   host: localhost
 
 cucumber:
