@@ -1,0 +1,5 @@
+<h2>新建工程</h2>
+<%= form_for @project do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= f.submit '创建工程' %>
+<% end %>
