@@ -7,6 +7,9 @@ module NavigationHelpers
     # 符合'首页'或'首 页'的链接时
     when /首\s?页/
       '/'
+    when /"([^\"]*)"的工程页面/
+      # $1: 第一个参数
+      project_path(Project.find_by_name!($1))
     else
       begin
         page_name =~ /the (.*) page/

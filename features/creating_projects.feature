@@ -9,3 +9,5 @@ Feature: 创建工程
     And 我填写"名称"为"TextMate 2"
     And 我点击"创建工程"按钮
     Then 我应当看到"工程创建成功！"
+    And 我应当位于"TextMate 2"的工程页面
+    And 我应当看到"TextMate 2 - Projects - Ticketee"

@@ -27,3 +27,7 @@ Then /^(?:|我)应当看到"([^"]*)"$/ do |text|
     assert page.has_content?(text)
   end
 end
+
+Then /^(?:|我)应当位于(.+)$/ do |page_name|
+  path_to(page_name)
+end
