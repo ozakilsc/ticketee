@@ -10,11 +10,14 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    HashWithIndifferentAccess
     @project = Project.new(params[:project])
-    @project.save
-    flash[:notice] = "工程创建成功！"
-    redirect_to project_url @project
+    if @project.save
+      flash[:notice] = "工程创建成功！"
+      redirect_to @project
+    else
+      flash[:alert] = "工程创建失败。"
+      render :action => :new
+    end
   end
 
   def show
