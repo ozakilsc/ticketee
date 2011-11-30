@@ -1,4 +1,5 @@
-<%= error_messages_for f.object_name %>
+<%#= error_messages_for f.object_name %>
+<%= f.error_messages%>
 <p>
   <%= f.label :name, "名称：" %>
   <%= f.text_field :name%>

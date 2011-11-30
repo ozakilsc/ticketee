@@ -31,3 +31,11 @@ end
 Then /^(?:|我)应当位于(.+)$/ do |page_name|
   path_to(page_name)
 end
+
+Then /^我不应当再看到"([^"]*)"$/ do |text|
+  if page.respond_to? :should
+    page.should have_no_content(text)
+  else
+    assert page.has_no_content?(text)
+  end
+end

@@ -9,6 +9,7 @@ Ticketee::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
+  # Rails是否处理静态文件，还是委托给apache nginx来做？
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
