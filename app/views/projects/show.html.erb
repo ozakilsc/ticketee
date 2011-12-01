@@ -1,5 +1,13 @@
 <% title(@project.name, controller_name.capitalize)%>
 <h2><%= @project.name %></h2>
+<ul id="tickets">
+  <% @project.tickets.each do |ticket| %>
+    <li>
+      #<%= ticket.id %> - <%= link_to ticket.title, [@project, ticket] %>
+    </li>
+  <% end %>
+</ul>
 <%= link_to "修改工程", edit_project_path(@project) %>
 <%= link_to "删除工程", @project, :method => :delete,
     :confirm => "您确定删除?" %>
+<%= link_to "新建票样", new_project_ticket_path(@project) %>

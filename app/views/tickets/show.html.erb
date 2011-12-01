@@ -1,0 +1,7 @@
+<div id="ticket">
+  <h2><%= @ticket.title %></h2>
+  <%= simple_format(@ticket.description) %>
+</div>
+<%= link_to '修改票样', [:edit, @project, @ticket] %>
+<%= link_to '删除票样', [@project, @ticket], :method => :delete,
+    :confirm => "您确定删除票样吗?" %>

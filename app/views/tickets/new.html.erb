@@ -1,0 +1,5 @@
+<h2>新建票样</h2>
+<%= form_for [@project, @ticket] do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <%= f.submit '创建票样' %>
+<% end %>
