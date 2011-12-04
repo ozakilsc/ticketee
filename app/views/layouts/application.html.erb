@@ -8,6 +8,16 @@
 </head>
 <body>
 
+<nav>
+  <%#= link_to "注册", new_user_registration_path  %>
+  <% if user_signed_in? %>
+    您：<%= current_user.email %> 已登陆。
+  <% else %>
+    <%= link_to "注册", new_user_registration_path %>
+  <% end %>
+</nav>
+
+<%= link_to '登陆', new_user_session_path  %>
 <% flash.each do |key, value| %>
  <div class="flash" id="<%= key %>">
    <%= value %>

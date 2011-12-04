@@ -4,12 +4,17 @@ Feature: 查看票样
   我希望能在工程页面见到它
 
   Background:
+    Given 有下列用户:
+      | email | password |
+      | user@ticketee.com | password |
     Given 有一个叫"TextMate 2"的工程
-    And 这个工程有一张票样:
+    And "user@ticketee.com"为这个工程建了一张票样:
+    # And 这个工程有一张票样:
       | title | description |
       | Make it shiny! | Grandients! Startbursts! Oh my! |
     And 有一个叫"Internet Explorer"的工程
-    And 这个工程有一张票样:
+    And "user@ticketee.com"为这个工程建了一张票样:
+    # And 这个工程有一张票样:
       | title | description |
       | Standards compliance | Isn't a joke. |
     And 我位于首页

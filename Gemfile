@@ -8,6 +8,7 @@ gem 'rake', '0.9.2.2'
 
 gem 'mysql2'
 gem 'dynamic_form'
+gem 'devise', '~> 1.4.8'
 
 
 # Gems used only for assets and not required
@@ -43,4 +44,5 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
+  gem 'email_spec'
 end
